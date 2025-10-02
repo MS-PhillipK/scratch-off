@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>El's Scratch to Reveal</title>
+  <title>Scratch to Reveal</title>
   <style>
     :root {
       --bg: #0b1220;
@@ -87,20 +87,31 @@
     .tiny { font-size: 12px; color: var(--muted); margin-top: 10px; }
     .notice { margin-top: 12px; color: var(--muted); font-size: 13px; }
     .hidden { display: none !important; }
+
+    .chat-img {
+      max-width: min(90%, 520px);
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.35);
+      margin-bottom: 10px;
+      border: 1px solid rgba(255,255,255,.1);
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
-      <h1>El Settle - Scratch to reveal your code</h1>
-      <p class="lede">Use your mouse or finger to scratch the surface.</p>
+      <h1>Scratch to reveal your code</h1>
+      <p class="lede">Use your mouse or finger to scratch the surface. Once ~60% is cleared, it auto‑reveals. Host this single file on GitHub Pages.</p>
 
       <div class="scratch-area" id="scratch-area">
         <!-- Revealed content underneath the canvas cover -->
         <div class="content" aria-live="polite">
           <div>
-            <div class="label">El - Your GitHub Shop Code is</div>
-            <div class="code" id="secret-code">G1WHP2XRHP</div>
+            <img class="chat-img" alt="message preview" src="assets/teams-msg.png">
+            <div class="label">Your code</div>
+            <div class="code" id="secret-code">SAVE-40-AUSPOST-2025</div>
             <div class="notice" id="copied" role="status" aria-hidden="true">Copied!</div>
           </div>
         </div>
